@@ -25,14 +25,17 @@ rustc:
 ```
 cargo:
 	build:
+		--bin:
 	check:
 	clean:
+	generate:
 	new: 新建项目
 		--lib:
 	run:
 		-p: 指定包
 		
 	test:
+	tree:
 	update: 更新依赖
 	version:
 ```
@@ -151,6 +154,8 @@ std:
 			len():
 			remove():
 		---
+	convert:
+		TryFrom:
 	env:
 		args():
 		var():
@@ -192,7 +197,7 @@ std:
     		---
     		read():
     		write():
-    	---
+    	---   
 	ops:
 		Box:
 			new():
@@ -200,6 +205,10 @@ std:
 		Deref:
 		Drop:
 		---
+	sync:
+		Mutex:
+			---
+			lock():
 	thread:
 		sleep():
 		spawn():
@@ -502,6 +511,8 @@ Closure
 
 #### 异常处理
 
+`?`：尝试从Result中取出成功的值
+
 
 
 #### match匹配
@@ -768,6 +779,15 @@ async_std:
 
 ```
 chrono:
+	
+```
+
+
+
+### dotenv
+
+```
+dotenv:
 	
 ```
 
